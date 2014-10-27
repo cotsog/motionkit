@@ -1,7 +1,7 @@
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    settings = SKTSettings.settingsWithAppToken "token"
-    settings.knowledgeBaseURL = "https://supportkit.zendesk.com"
-    SupportKit.initWithSettings(settings)
+    credentialsProvider = AWSStaticCredentialsProvider.credentialsWithAccessKey "foo", secretKey:"bar"
+    settings = SKTSettings.settingWithAppToken 'token'
+    true
   end
 end
