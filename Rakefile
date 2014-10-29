@@ -2,9 +2,6 @@
 $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project/template/ios'
 
-require 'rubygems'
-require 'motion-cocoapods'
-
 begin
   require 'bundler'
   Bundler.require
@@ -13,10 +10,8 @@ end
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
-  app.name = 'awstest'
-
+  app.name = 'supportkit'
   app.pods do
-    pod 'AWSiOSSDKv2'
-    pod 'SupportKit'
+    pod 'SupportKit', '2.4.1'
   end
 end
